@@ -62,8 +62,7 @@ RUN mamba install --yes \
     'statsmodels' \
     'sympy' \
     'widgetsnbextension'\
-    'xlrd' \
-    'zCurve' && \
+    'xlrd' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
