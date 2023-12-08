@@ -79,6 +79,9 @@ RUN git clone https://github.com/PAIR-code/facets && \
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
+# Install further dependencies.
+RUN pip install zCurve==0.0.4
+
 USER ${NB_UID}
 
 WORKDIR "${HOME}"
