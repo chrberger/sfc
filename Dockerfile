@@ -80,7 +80,7 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
 # Install further dependencies.
-RUN pip install zCurve==0.0.4
+RUN pip install zCurve==0.0.4 mplcursors
 
 USER ${NB_UID}
 
